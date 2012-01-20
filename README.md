@@ -21,6 +21,7 @@ database. (You should be creating the database with this user as well.
 
 You will also need to add the following to your configuration file 
 (usually Settings.php)
+
     'casino.channels' => array(); //This must be an array!
     'casino.prefs' => array(
         'db_host' => "", //Database host
