@@ -2,15 +2,6 @@
 
 class Phergie_Plugin_Casino extends Phergie_Plugin_Abstract
 {
-    /* SQL Script to reset the database
-    
-    TRUNCATE TABLE userlist;
-    TRUNCATE TABLE jackpotlog;
-    UPDATE settings SET jackpot = 0;
-    ALTER SEQUENCE userlist_id restart;
-    ALTER SEQUENCE jackpotlog_nick_seq restart;
-*/
-
     /* DB Settings - Uses Postgresql */
     
     private $dbh = null;
@@ -51,7 +42,7 @@ class Phergie_Plugin_Casino extends Phergie_Plugin_Abstract
         $this->db_user_pass = $this->config['casino.prefs']['db_user_pass'];
         $this->db_name = $this->config['casino.prefs']['db_name'];
         $this->dbh = new PDO("pgsql:host=".$this->db_host.";dbname=".$this->db_name, $this->db_user, $this->db_user_pass);
-        //$this->dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+        $this->dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
     }
 
     private function in_arrayi($needle, $haystack)
