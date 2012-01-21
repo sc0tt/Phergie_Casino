@@ -63,7 +63,7 @@ REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
-### Edit <user> with your dedicated database user for this bot ###
+/* Edit <user> with your dedicated database user for this bot */
 ALTER TABLE public.jackpotlog_nick_seq OWNER TO <user>;
 ALTER TABLE public.settings OWNER TO <user>;
 ALTER TABLE public.userlist_id OWNER TO <user>;

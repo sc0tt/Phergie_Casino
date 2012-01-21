@@ -6,14 +6,14 @@ Usage
 =====
 Using it is pretty easy, add 'Casino' in your configuration file under the 
 plugins to load, add the configuration options mentioned below, and then 
-restart your bot. He should join the channels you specified. This script is 
+restart your bot. He work in the channels you specified (He does not autojoin them. Use another plugin for that :P). This script is 
 meant to be run in a moderated channel, requiring voice for users to speak.
 It has spam protection built in so that users can only speak once per 3 seconds
 
 Configuration
 =============
 Before using this Casino plugin you will need to setup a database (I have only 
-tested this with PostgreSQL.
+tested this with PostgreSQL but it should not be hard to port to MySQL.
 
 The database structure dump has been provided, but you will need to edit the 
 last four lines with the name of the database user that will be accessing the 
